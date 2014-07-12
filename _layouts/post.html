@@ -16,7 +16,7 @@
     <!-- HEADER -->
     <div id="header_wrap" class="outer">
         <header class="inner">
-          <a id="forkme_banner" href="https://github.com/nedos">View on GitHub</a>
+          <a id="forkme_banner" href="https://github.com/nedos">nedos on GitHub</a>
 
           <h1 id="project_title">nedos.net</h1>
           <h2 id="project_tagline"></h2>
@@ -27,7 +27,14 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <p>My name is Dmitry Nedospasov. I'm a researcher and PhD student at Security in Telecommunications, a joint research institute of TU Berlin and the Telekom Innovation Laboratories. I'm also part of the Helmholtz Research School for Security Technologies doctoral program. Specifically, I'm interested and working in the field of hardware security of modern ICs.</p>
+          <h2>{{ page.title }}</h2>
+          {% if page.subtitle != blank %}
+          <h3>{{ page.subtitle }}</h3>
+          {% endif %}
+
+          <!-- Include Markdown Content -->
+          {{ content }}
+
       </section>
     </div>
 
