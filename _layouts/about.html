@@ -6,9 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1" />
     <meta name="description" content="nedos.net : " />
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="../stylesheets/stylesheet.css">
 
     <title>nedos.net</title>
+
+    <script type="text/javascript">
+    function UnCryptMailto( s )
+    {
+        var n = 0;
+        var r = "";
+        for( var i = 0; i < s.length; i++)
+        {
+            n = s.charCodeAt( i );
+            if( n >= 8364 )
+            {
+                n = 128;
+            }
+            r += String.fromCharCode( n - 1 );
+        }
+        return r;
+    }
+
+    function linkTo_UnCryptMailto( s )
+    {
+        location.href=UnCryptMailto( s );
+    }
+    </script>
   </head>
 
   <body>
@@ -27,6 +50,10 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
+          <h2>{{ page.title }}</h2>
+          {% if page.subtitle != blank %}
+          <h3>{{ page.subtitle }}</h3>
+          {% endif %}
 
           <!-- Include Markdown Content -->
           {{ content }}
