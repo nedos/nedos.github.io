@@ -9,4 +9,4 @@ title: nedos.net
 * [Publications](publications)
 * [Twitter](https://twitter.com/nedos)
 * [Github](https://github.com/nedos)
-* [GPG Key](dmitry@h.rdw.re.asc)
+* [GPG](gpg)
