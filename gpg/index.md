@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: GPG
 ---
 
 Download: [dmitry@h.rdw.re.asc](dmitry@h.rdw.re.asc)
